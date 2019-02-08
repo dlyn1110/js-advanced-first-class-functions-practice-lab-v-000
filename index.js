@@ -15,25 +15,25 @@ function logDriversByHometown(drivers, hometown) {
 };
 
 
-function driversByRevenue(drivers) {
+ function driversByRevenue(drivers) {
     let sortDriversByRevenue = drivers.slice();
         return sortDriversByRevenue.sort(function(a,b){
              return a.revenue - b.revenue;
         });
 };
 
-function driversByName(drivers) {
+ function driversByName(drivers) {
     let sortDriversByName = drivers.slice();
         return sortDriversByName.sort(function(a,b){
             return a.name.localeCompare(b.name);
     });
 };
 
-function totalRevenue(drivers) {
+ function totalRevenue(drivers) {
     return drivers.reduce(function(total, start){
         return total + start.revenue;}, 0);
 };
 
-function averageRevenue(drivers) {
+ function averageRevenue(drivers) {
     return totalRevenue(drivers)/drivers.length;
 };
